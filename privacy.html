@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Impact Log</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container content">
+        <header>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Impact Log - RangeLogic</p>
+        </header>
+
+        <div class="effective-date">
+            <strong>Effective Date:</strong> January 1, 2025<br>
+            <strong>Last Updated:</strong> December 27, 2024
+        </div>
+
+        <main>
+            <p>Dylan Burrough ("we," "us," or "our") operates the Impact Log mobile application ("App"). This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our App.</p>
+
+            <p><strong>By using Impact Log, you consent to the data practices described in this policy.</strong></p>
+
+            <h2>1. Information We Collect</h2>
+
+            <h3>1.1 Information You Provide Directly</h3>
+            <p>When you use Impact Log, you may voluntarily provide:</p>
+
+            <h4>Account Information</h4>
+            <ul>
+                <li><strong>Email Address:</strong> If you create an account (optional)</li>
+                <li><strong>Password:</strong> Encrypted and stored securely via Firebase Authentication</li>
+                <li><strong>Anonymous ID:</strong> If you use the App without creating an account, Firebase assigns a unique anonymous user ID</li>
+            </ul>
+
+            <h4>Equipment Profile Data</h4>
+            <ul>
+                <li>Rifle specifications (name, caliber, barrel length, twist rate, round count)</li>
+                <li>Scope specifications (model, manufacturer, click values, magnification range)</li>
+                <li>Ammunition data (ballistic coefficient, muzzle velocity, bullet weight, powder type, etc.)</li>
+                <li>Complete load profiles (combinations of rifle + scope + ammo)</li>
+            </ul>
+
+            <h4>Ballistic Calculation Inputs</h4>
+            <ul>
+                <li>Environmental conditions (temperature, pressure, humidity, altitude)</li>
+                <li>Target distance and wind conditions</li>
+                <li>Zero distance and sight-in data</li>
+            </ul>
+
+            <h4>Target Analysis Data (Optional)</h4>
+            <ul>
+                <li>Photos of targets captured via camera or selected from photo library</li>
+                <li>Impact point measurements and group size calculations</li>
+                <li>Zero confirmation data</li>
+            </ul>
+
+            <h4>Stage Mode Data (Optional)</h4>
+            <ul>
+                <li>Target lists with ranges and firing solutions</li>
+                <li>Field notes and session data</li>
+            </ul>
+
+            <h3>1.2 Information Collected Automatically</h3>
+
+            <h4>Device and Location Information</h4>
+            <ul>
+                <li><strong>Location Data:</strong> GPS coordinates when you request ballistic calculations requiring elevation or Coriolis adjustments (only when location permission is granted)</li>
+                <li><strong>Device Sensors:</strong> Accelerometer and gyroscope data for measuring device inclination (look angle calculations)</li>
+                <li><strong>Compass Data:</strong> Device heading for directional calculations</li>
+            </ul>
+
+            <h4>Bluetooth Data (Optional)</h4>
+            <ul>
+                <li>Kestrel weather meter connection status and sensor readings (temperature, wind speed/direction, pressure, humidity) if you enable Bluetooth integration</li>
+            </ul>
+
+            <h4>Apple Watch Data (Optional)</h4>
+            <ul>
+                <li>Synchronization status between iPhone and Apple Watch</li>
+                <li>Stage data sent to Watch for field use</li>
+            </ul>
+
+            <h4>Usage Analytics (Future Feature)</h4>
+            <ul>
+                <li>We may implement Firebase Analytics to understand feature usage and app performance</li>
+                <li>This data is aggregated and does not identify you personally</li>
+                <li>You will be notified and may opt out if/when analytics are enabled</li>
+            </ul>
+
+            <h3>1.3 Payment Information</h3>
+            <ul>
+                <li><strong>Subscriptions:</strong> Processed through Apple App Store or Google Play Store - we do NOT collect or store your payment card information</li>
+                <li><strong>RevenueCat:</strong> Manages subscription status and validates receipts (server-side)</li>
+                <li>We receive only: subscription status (active/inactive), subscription type, and anonymized purchase receipts</li>
+            </ul>
+
+            <h2>2. How We Use Your Information</h2>
+
+            <h3>2.1 Core App Functionality</h3>
+            <ul>
+                <li><strong>Ballistic Calculations:</strong> Process your equipment data, environmental inputs, and target distances to generate trajectory solutions</li>
+                <li><strong>Profile Management:</strong> Store and retrieve your rifle, scope, and ammunition profiles</li>
+                <li><strong>Cloud Sync:</strong> Synchronize your data across devices if you enable cloud storage</li>
+                <li><strong>Apple Watch Integration:</strong> Send stage data to your Watch for quick field reference</li>
+            </ul>
+
+            <h3>2.2 Account Management</h3>
+            <ul>
+                <li>Create and authenticate your account via Firebase Authentication</li>
+                <li>Link anonymous accounts to email accounts (preserves data when upgrading)</li>
+                <li>Manage subscription status and Pro feature access</li>
+            </ul>
+
+            <h3>2.3 Service Improvements</h3>
+            <ul>
+                <li>Identify and fix bugs or technical issues</li>
+                <li>Improve app performance and user experience</li>
+                <li>Develop new features based on usage patterns (if analytics enabled)</li>
+            </ul>
+
+            <h3>2.4 Communication</h3>
+            <ul>
+                <li>Respond to your support requests or inquiries</li>
+                <li>Send important notifications about app updates or service changes</li>
+                <li>Notify you of subscription renewals or payment issues</li>
+            </ul>
+
+            <h2>3. How We Store Your Data</h2>
+
+            <h3>3.1 Local Storage (On-Device)</h3>
+            <ul>
+                <li><strong>SQLite Database:</strong> All your equipment profiles, ballistic data, and settings are stored locally on your device using the Drift database library</li>
+                <li><strong>Encryption:</strong> Local data uses iOS/Android platform-level encryption (encrypted when device is locked)</li>
+                <li><strong>SharedPreferences:</strong> App preferences and stage mode data stored locally</li>
+            </ul>
+
+            <h3>3.2 Cloud Storage (Optional - Firebase Firestore)</h3>
+            <p>If you enable cloud synchronization (Pro feature):</p>
+            <ul>
+                <li><strong>Data Stored:</strong> Rifles, scopes, ammunition, and load profiles are synced to Firebase Cloud Firestore</li>
+                <li><strong>Encryption in Transit:</strong> All data transmitted via HTTPS (TLS 1.2+)</li>
+                <li><strong>Encryption at Rest:</strong> Google encrypts Firestore data at rest using AES-256</li>
+                <li><strong>Data Location:</strong> Stored in Google Cloud Platform data centers (region: US by default)</li>
+                <li><strong>User Isolation:</strong> Firestore security rules ensure you can only access your own data</li>
+            </ul>
+
+            <h3>3.3 Authentication Data (Firebase Auth)</h3>
+            <ul>
+                <li>Email and password hashed using bcrypt (we never see your plaintext password)</li>
+                <li>Anonymous user IDs generated randomly by Firebase</li>
+                <li>Managed entirely by Google's Firebase infrastructure</li>
+            </ul>
+
+            <h3>3.4 Subscription Data (RevenueCat)</h3>
+            <ul>
+                <li>Subscription receipts validated server-side by RevenueCat</li>
+                <li>We receive only: user ID, subscription status, and entitlement access</li>
+                <li>Payment details (cards, billing address) never reach our servers</li>
+            </ul>
+
+            <h2>4. Data Sharing and Disclosure</h2>
+
+            <h3>4.1 We Do NOT Sell Your Data</h3>
+            <p><strong>We do not sell, rent, or trade your personal information to third parties for marketing purposes. Period.</strong></p>
+
+            <h3>4.2 Third-Party Service Providers</h3>
+            <p>We share data only with trusted service providers necessary for app functionality:</p>
+
+            <h4>Firebase (Google LLC)</h4>
+            <ul>
+                <li><strong>Purpose:</strong> Authentication, cloud database, and (future) analytics</li>
+                <li><strong>Data Shared:</strong> Email, user ID, equipment profiles (if sync enabled), device info</li>
+                <li><strong>Privacy Policy:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></li>
+            </ul>
+
+            <h4>RevenueCat</h4>
+            <ul>
+                <li><strong>Purpose:</strong> Subscription management and receipt validation</li>
+                <li><strong>Data Shared:</strong> User ID, subscription receipts, device identifiers</li>
+                <li><strong>Privacy Policy:</strong> <a href="https://www.revenuecat.com/privacy" target="_blank">https://www.revenuecat.com/privacy</a></li>
+            </ul>
+
+            <h4>Apple App Store / Google Play Store</h4>
+            <ul>
+                <li><strong>Purpose:</strong> Payment processing and subscription billing</li>
+                <li><strong>Data Shared:</strong> Apple/Google handle all payment information directly</li>
+                <li><strong>Privacy Policies:</strong>
+                    <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple</a>,
+                    <a href="https://policies.google.com/privacy" target="_blank">Google</a>
+                </li>
+            </ul>
+
+            <h3>4.3 Legal Requirements</h3>
+            <p>We may disclose your information if required to do so by law or in response to:</p>
+            <ul>
+                <li>Valid legal process (subpoena, court order, search warrant)</li>
+                <li>Government or law enforcement requests</li>
+                <li>Protection of our rights, property, or safety</li>
+                <li>Emergency situations involving danger of death or serious injury</li>
+            </ul>
+
+            <h3>4.4 Business Transfers</h3>
+            <p>If Impact Log is acquired by or merged with another company, your information may be transferred as part of that transaction. We will notify you via email or app notification before your data is transferred and becomes subject to a different privacy policy.</p>
+
+            <h2>5. Data Retention</h2>
+
+            <h3>5.1 Active Accounts</h3>
+            <ul>
+                <li><strong>Local Data:</strong> Stored on your device until you delete the app or clear data</li>
+                <li><strong>Cloud Data:</strong> Retained in Firestore as long as your account is active</li>
+            </ul>
+
+            <h3>5.2 Account Deletion</h3>
+            <p>You can delete your account at any time through the App settings:</p>
+            <ul>
+                <li><strong>Immediate:</strong> Firebase Authentication account deleted immediately</li>
+                <li><strong>30 Days:</strong> Cloud-stored equipment profiles and data deleted from Firestore after 30 days</li>
+                <li><strong>Permanent:</strong> Deletion is irreversible - data cannot be recovered</li>
+            </ul>
+
+            <h3>5.3 Subscription Data</h3>
+            <ul>
+                <li>RevenueCat retains subscription records for tax and legal compliance (typically 7 years)</li>
+                <li>Apple/Google retain payment records per their policies</li>
+            </ul>
+
+            <h2>6. Your Privacy Rights</h2>
+
+            <h3>6.1 Access and Control</h3>
+            <p>You have the right to:</p>
+            <ul>
+                <li><strong>Access Your Data:</strong> View all equipment profiles and settings within the App</li>
+                <li><strong>Export Your Data:</strong> Use the CSV export feature to download your ballistic data</li>
+                <li><strong>Correct Your Data:</strong> Edit any equipment profile or setting at any time</li>
+                <li><strong>Delete Your Data:</strong> Delete individual profiles or your entire account</li>
+            </ul>
+
+            <h3>6.2 Privacy Controls</h3>
+            <ul>
+                <li><strong>Location:</strong> Grant or revoke location permission in iOS/Android settings</li>
+                <li><strong>Camera/Photos:</strong> Grant or revoke camera/photo library access in device settings</li>
+                <li><strong>Bluetooth:</strong> Enable/disable Kestrel integration in App settings</li>
+                <li><strong>Cloud Sync:</strong> Enable/disable cloud synchronization in App settings</li>
+            </ul>
+
+            <h3>6.3 California Privacy Rights (CCPA)</h3>
+            <p>If you are a California resident, you have additional rights:</p>
+            <ul>
+                <li><strong>Right to Know:</strong> Request disclosure of personal information collected, used, or shared</li>
+                <li><strong>Right to Delete:</strong> Request deletion of personal information we hold</li>
+                <li><strong>Right to Opt-Out:</strong> We don't sell data, so opt-out is not applicable</li>
+                <li><strong>Non-Discrimination:</strong> We will not discriminate against you for exercising your rights</li>
+            </ul>
+            <p>To exercise these rights, email <a href="mailto:support@impactlog.app">support@impactlog.app</a></p>
+
+            <h3>6.4 European Privacy Rights (GDPR)</h3>
+            <p>If you are in the European Economic Area (EEA), you have rights under GDPR:</p>
+            <ul>
+                <li><strong>Right of Access:</strong> Obtain confirmation of data processing and access to your data</li>
+                <li><strong>Right to Rectification:</strong> Correct inaccurate or incomplete data</li>
+                <li><strong>Right to Erasure:</strong> Request deletion of your data ("right to be forgotten")</li>
+                <li><strong>Right to Data Portability:</strong> Receive your data in a structured, machine-readable format</li>
+                <li><strong>Right to Object:</strong> Object to processing of your data</li>
+                <li><strong>Right to Withdraw Consent:</strong> Withdraw consent for data processing at any time</li>
+            </ul>
+            <p><strong>Legal Basis for Processing:</strong> We process your data based on:</p>
+            <ul>
+                <li><strong>Contract Performance:</strong> Necessary to provide the App's services</li>
+                <li><strong>Consent:</strong> You have given explicit consent (e.g., location access)</li>
+                <li><strong>Legitimate Interests:</strong> App improvement and fraud prevention</li>
+            </ul>
+
+            <h2>7. Children's Privacy</h2>
+            <p>Impact Log is not intended for use by individuals under 18 years of age. We do not knowingly collect personal information from children. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately at <a href="mailto:support@impactlog.app">support@impactlog.app</a>, and we will delete the information.</p>
+
+            <h2>8. Security Measures</h2>
+
+            <h3>8.1 Technical Safeguards</h3>
+            <ul>
+                <li><strong>Encryption in Transit:</strong> All network communication uses HTTPS/TLS 1.2+</li>
+                <li><strong>Encryption at Rest:</strong> Firebase encrypts cloud data using AES-256</li>
+                <li><strong>Device Encryption:</strong> Local SQLite database protected by iOS/Android encryption</li>
+                <li><strong>Authentication:</strong> Firebase handles password hashing using industry-standard bcrypt</li>
+            </ul>
+
+            <h3>8.2 Access Controls</h3>
+            <ul>
+                <li><strong>Firestore Security Rules:</strong> User-scoped data isolation (you can only access your own data)</li>
+                <li><strong>Server-Side Validation:</strong> RevenueCat validates subscription receipts server-side to prevent fraud</li>
+            </ul>
+
+            <h3>8.3 No Absolute Security</h3>
+            <p>While we implement industry-standard security measures, no method of electronic storage or transmission is 100% secure. We cannot guarantee absolute security of your data. Use Impact Log at your own risk.</p>
+
+            <h2>9. International Data Transfers</h2>
+            <p>Impact Log is operated from the United States. If you use the App from outside the US:</p>
+            <ul>
+                <li>Your data may be transferred to and stored in the United States</li>
+                <li>Firebase Cloud Firestore uses US-based data centers by default</li>
+                <li>US privacy laws may differ from those in your country</li>
+                <li>By using the App, you consent to the transfer of your data to the US</li>
+            </ul>
+
+            <h2>10. Third-Party Links and Services</h2>
+            <p>Impact Log may contain links to third-party websites or integrate with third-party services (e.g., Kestrel weather meters). We are not responsible for the privacy practices of these third parties. We encourage you to review their privacy policies.</p>
+
+            <h2>11. Do Not Track (DNT)</h2>
+            <p>We do not currently respond to "Do Not Track" signals from web browsers, as the App does not track users across third-party websites. Future analytics features (if implemented) will comply with applicable DNT standards.</p>
+
+            <h2>12. Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect:</p>
+            <ul>
+                <li>Changes in our data practices</li>
+                <li>New features or services</li>
+                <li>Legal or regulatory requirements</li>
+            </ul>
+            <p><strong>Notification of Changes:</strong></p>
+            <ul>
+                <li>Updated "Last Updated" date at the top of this policy</li>
+                <li>In-app notification for material changes</li>
+                <li>Email notification (if you have an account) for significant changes</li>
+            </ul>
+            <p>Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+            <h2>13. Community Features (Future)</h2>
+            <p>If we implement community features (e.g., shared ballistic coefficient database):</p>
+            <ul>
+                <li>Contributions will be anonymized (no personal information shared publicly)</li>
+                <li>You may opt out of contributing data</li>
+                <li>Read-only access to community data will be available to all users</li>
+                <li>We will update this Privacy Policy and notify you before launch</li>
+            </ul>
+
+            <h2>14. Data Breach Notification</h2>
+            <p>In the unlikely event of a data breach involving your personal information:</p>
+            <ul>
+                <li>We will investigate promptly and assess the scope of the breach</li>
+                <li>Affected users will be notified via email within 72 hours (GDPR requirement)</li>
+                <li>We will provide details about the breach and steps taken to mitigate harm</li>
+                <li>Regulatory authorities will be notified as required by law</li>
+            </ul>
+
+            <h2>15. Contact Us</h2>
+            <p>For questions, concerns, or requests regarding this Privacy Policy or your data, please contact:</p>
+            <p>
+                <strong>Dylan Burrough</strong><br>
+                Email: <a href="mailto:support@impactlog.app">support@impactlog.app</a><br>
+                App: Impact Log (RangeLogic)
+            </p>
+
+            <h3>Data Protection Officer</h3>
+            <p>For GDPR-related inquiries, you may contact our designated data protection representative at the email above.</p>
+
+            <h3>Supervisory Authority (EEA Residents)</h3>
+            <p>If you are in the EEA and have concerns about our data practices, you have the right to lodge a complaint with your local data protection authority.</p>
+
+            <hr style="margin: 40px 0; border: none; border-top: 1px solid #e0e0e0;">
+
+            <h2>16. Summary of Key Points</h2>
+            <div style="background: #f9f9f9; padding: 20px; border-radius: 6px; border-left: 4px solid #007AFF;">
+                <ul style="margin: 0;">
+                    <li><strong>We don't sell your data</strong> - Your information is never sold to third parties</li>
+                    <li><strong>Local-first design</strong> - All data stored on your device; cloud sync is optional</li>
+                    <li><strong>You control your data</strong> - Export, edit, or delete at any time</li>
+                    <li><strong>Minimal collection</strong> - We only collect what's necessary for app functionality</li>
+                    <li><strong>Secure storage</strong> - Encrypted in transit (HTTPS) and at rest (AES-256)</li>
+                    <li><strong>Third-party services</strong> - Firebase, RevenueCat, and App Stores handle specific functions</li>
+                    <li><strong>No tracking</strong> - We don't track you across websites or apps (analytics are aggregated if enabled)</li>
+                    <li><strong>Your rights</strong> - Access, correct, export, or delete your data anytime</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p><a href="index.html">← Back to Legal Home</a> | <a href="terms.html">Terms of Service →</a></p>
+            <p>&copy; 2025 Dylan Burrough. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
