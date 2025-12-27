@@ -1,0 +1,2 @@
+# impactlog-legal
+Legal Page
